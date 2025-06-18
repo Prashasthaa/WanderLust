@@ -9,6 +9,8 @@ body {
     flex: 1;
 }
 
+/* Navbar */
+
 .navbar {
     height: 5rem;
     background-color: white;
@@ -19,14 +21,39 @@ body {
     font-size: 2rem;
 }
 
+.navbar-brand {
+    color: #fe424d !important;
+    font-size: 2rem !important;
+}
+
 .nav-link {
     color: #222222 !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav .nav-link {
+        color: #222 !important;
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* Footer */
 .f-info-links a {
     text-decoration: none;
     color: #222222;
+}
+
+.f-info a {
+    color: black;
 }
 
 .f-info-links a:hover {
@@ -57,7 +84,6 @@ body {
     justify-content: center;
     align-items: space-evenly;
 }
-
 
 /* Cards  */
 .listing-card {
@@ -108,8 +134,11 @@ body {
 }
 
 /* Show Page */
+
 .show-img {
     height: 30vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .btns {
@@ -122,8 +151,90 @@ body {
 }
 
 /*MAP*/
-
 #map {
-    height: 400px;
-    width: 80vh;
+    width: 100%;
+    height: 300px;
+    max-width: 100%;
+}
+
+
+/* Search btn */
+
+.search-btn {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.search-btn:hover {
+    background-color: #fe424d !important;
+    color: #fff !important;
+}
+
+.btn-search i {
+    display: inline !important;
+    margin-right: 0.5rem !important;
+}
+
+.search-inp {
+    border-radius: 25px !important;
+    padding: 0.5rem 3rem 0.5rem 3rem !important;
+    font-size: 1rem !important;
+}
+
+
+/* filters / category*/
+
+#filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 1rem;
+    scrollbar-width: none;
+
+}
+
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter {
+    flex: 0 0 auto;
+
+    text-align: center;
+    opacity: 0.7;
+    min-width: 80px;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.filter a {
+    text-decoration: none;
+    color: #333;
 }

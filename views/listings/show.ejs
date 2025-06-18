@@ -30,7 +30,7 @@
   <div class="btns">
     <a
       href="/listings/<%=listing._id%>/edit"
-      class="btn btn-dark col-1 offset-3 edit-btn"
+      class="btn btn-dark offset-3 edit-btn"
     >
       Edit
     </a>
@@ -132,7 +132,9 @@
           method="POST"
           action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=Delete"
         >
+          <%if(curUser&&review.author._id.equals(curUser._id)){%>
           <button class="btn btn-sm btn-dark">Delete</button>
+          <%}%>
         </form>
       </div>
 
